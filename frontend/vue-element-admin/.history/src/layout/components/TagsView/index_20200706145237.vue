@@ -50,11 +50,8 @@ export default {
   },
   watch: {
     $route() {
-      if(this.$route.path !== '/mvo/first-meet')
-      {
-      this.addTags()
+      // this.addTags()
       this.moveToCurrentTag()
-    }
     },
     visible(value) {
       if (value) {
@@ -66,7 +63,7 @@ export default {
   },
   mounted() {
     this.initTags()
-    this.addTags()
+    // this.addTags()
   },
   methods: {
     isActive(route) {

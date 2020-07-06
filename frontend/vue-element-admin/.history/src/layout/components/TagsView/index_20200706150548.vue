@@ -52,6 +52,7 @@ export default {
     $route() {
       if(this.$route.path !== '/mvo/first-meet')
       {
+        console.log(this.$route.path)
       this.addTags()
       this.moveToCurrentTag()
     }

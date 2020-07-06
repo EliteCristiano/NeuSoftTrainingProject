@@ -235,8 +235,7 @@ export const asyncRoutes = [
         path: 'first-meet',
         component: () => import('@/views/mvo/mvo-firstMeet'),
         name: 'firstMeet',
-        meta: { title: 'First Meet'},
-        hidden:true
+        meta: { title: 'First Meet'}
       },
       {
         path: 'myInfo',

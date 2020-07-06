@@ -49,13 +49,11 @@ export default {
     }
   },
   watch: {
-    $route() {
-      if(this.$route.path !== '/mvo/first-meet')
-      {
-      this.addTags()
-      this.moveToCurrentTag()
-    }
-    },
+    // $route() {
+    //   console.log(this.$route.path)
+    //   this.addTags()
+    //   this.moveToCurrentTag()
+    // },
     visible(value) {
       if (value) {
         document.body.addEventListener('click', this.closeMenu)
