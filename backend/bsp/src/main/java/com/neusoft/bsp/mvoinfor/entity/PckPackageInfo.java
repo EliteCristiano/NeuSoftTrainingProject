@@ -1,19 +1,21 @@
 package com.neusoft.bsp.mvoinfor.entity;
 
-
 import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.format.annotation.DateTimeFormat;
 
+import java.math.BigDecimal;
 import java.sql.Timestamp;
 
+public class PckPackageInfo {
 
-public class ManManufacturer {
-    int man_id;
-    String name_en;
-    String name_cn;
-    String gmc_report_type;
-    String gmc_report_url;
-    String description;
+    int pck_id;
+    int war_id;
+    int pro_id;
+    String type_cd;
+    BigDecimal width;
+    BigDecimal height;
+    BigDecimal length;
+    BigDecimal weight;
     String created_by;
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
@@ -25,53 +27,71 @@ public class ManManufacturer {
     int call_cnt;
     String remark;
     String sts_cd;
+    String heavy_cargo;
+    String logistics_company;
 
-    public int getMan_id() {
-        return man_id;
+    public int getPck_id() {
+        return pck_id;
     }
 
-    public void setMan_id(int man_id) {
-        this.man_id = man_id;
+    public void setPck_id(int pck_id) {
+        this.pck_id = pck_id;
     }
 
-    public String getName_en() {
-        return name_en;
+    public int getWar_id() {
+        return war_id;
     }
 
-    public void setName_en(String name_en) {
-        this.name_en = name_en;
+    public void setWar_id(int war_id) {
+        this.war_id = war_id;
     }
 
-    public String getName_cn() {
-        return name_cn;
+    public int getPro_id() {
+        return pro_id;
     }
 
-    public void setName_cn(String name_cn) {
-        this.name_cn = name_cn;
+    public void setPro_id(int pro_id) {
+        this.pro_id = pro_id;
     }
 
-    public String getGmc_report_type() {
-        return gmc_report_type;
+    public String getType_cd() {
+        return type_cd;
     }
 
-    public void setGmc_report_type(String gmc_report_type) {
-        this.gmc_report_type = gmc_report_type;
+    public void setType_cd(String type_cd) {
+        this.type_cd = type_cd;
     }
 
-    public String getGmc_report_url() {
-        return gmc_report_url;
+    public BigDecimal getWidth() {
+        return width;
     }
 
-    public void setGmc_report_url(String gmc_report_url) {
-        this.gmc_report_url = gmc_report_url;
+    public void setWidth(BigDecimal width) {
+        this.width = width;
     }
 
-    public String getDescription() {
-        return description;
+    public BigDecimal getHeight() {
+        return height;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setHeight(BigDecimal height) {
+        this.height = height;
+    }
+
+    public BigDecimal getLength() {
+        return length;
+    }
+
+    public void setLength(BigDecimal length) {
+        this.length = length;
+    }
+
+    public BigDecimal getWeight() {
+        return weight;
+    }
+
+    public void setWeight(BigDecimal weight) {
+        this.weight = weight;
     }
 
     public String getCreated_by() {
@@ -130,15 +150,33 @@ public class ManManufacturer {
         this.sts_cd = sts_cd;
     }
 
+    public String getHeavy_cargo() {
+        return heavy_cargo;
+    }
+
+    public void setHeavy_cargo(String heavy_cargo) {
+        this.heavy_cargo = heavy_cargo;
+    }
+
+    public String getLogistics_company() {
+        return logistics_company;
+    }
+
+    public void setLogistics_company(String logistics_company) {
+        this.logistics_company = logistics_company;
+    }
+
     @Override
     public String toString() {
-        return "ManManufacturer{" +
-                "man_id=" + man_id +
-                ", name_en='" + name_en + '\'' +
-                ", name_cn='" + name_cn + '\'' +
-                ", gmc_report_type='" + gmc_report_type + '\'' +
-                ", gmc_report_url='" + gmc_report_url + '\'' +
-                ", description='" + description + '\'' +
+        return "PckPackageInfo{" +
+                "pck_id=" + pck_id +
+                ", war_id=" + war_id +
+                ", pro_id=" + pro_id +
+                ", type_cd='" + type_cd + '\'' +
+                ", width=" + width +
+                ", height=" + height +
+                ", length=" + length +
+                ", weight=" + weight +
                 ", created_by='" + created_by + '\'' +
                 ", creation_date=" + creation_date +
                 ", last_update_by='" + last_update_by + '\'' +
@@ -146,6 +184,8 @@ public class ManManufacturer {
                 ", call_cnt=" + call_cnt +
                 ", remark='" + remark + '\'' +
                 ", sts_cd='" + sts_cd + '\'' +
+                ", heavy_cargo='" + heavy_cargo + '\'' +
+                ", logistics_company='" + logistics_company + '\'' +
                 '}';
     }
 }

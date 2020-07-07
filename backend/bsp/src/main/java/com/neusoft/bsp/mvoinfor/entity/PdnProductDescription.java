@@ -1,19 +1,16 @@
 package com.neusoft.bsp.mvoinfor.entity;
 
-
 import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.sql.Timestamp;
 
+public class PdnProductDescription {
 
-public class ManManufacturer {
-    int man_id;
-    String name_en;
-    String name_cn;
-    String gmc_report_type;
-    String gmc_report_url;
-    String description;
+    int pdn_id;
+    int pro_id;
+    String type_cd;
+    String descrition;
     String created_by;
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
@@ -26,52 +23,36 @@ public class ManManufacturer {
     String remark;
     String sts_cd;
 
-    public int getMan_id() {
-        return man_id;
+    public int getPdn_id() {
+        return pdn_id;
     }
 
-    public void setMan_id(int man_id) {
-        this.man_id = man_id;
+    public void setPdn_id(int pdn_id) {
+        this.pdn_id = pdn_id;
     }
 
-    public String getName_en() {
-        return name_en;
+    public int getPro_id() {
+        return pro_id;
     }
 
-    public void setName_en(String name_en) {
-        this.name_en = name_en;
+    public void setPro_id(int pro_id) {
+        this.pro_id = pro_id;
     }
 
-    public String getName_cn() {
-        return name_cn;
+    public String getType_cd() {
+        return type_cd;
     }
 
-    public void setName_cn(String name_cn) {
-        this.name_cn = name_cn;
+    public void setType_cd(String type_cd) {
+        this.type_cd = type_cd;
     }
 
-    public String getGmc_report_type() {
-        return gmc_report_type;
+    public String getDescrition() {
+        return descrition;
     }
 
-    public void setGmc_report_type(String gmc_report_type) {
-        this.gmc_report_type = gmc_report_type;
-    }
-
-    public String getGmc_report_url() {
-        return gmc_report_url;
-    }
-
-    public void setGmc_report_url(String gmc_report_url) {
-        this.gmc_report_url = gmc_report_url;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
+    public void setDescrition(String descrition) {
+        this.descrition = descrition;
     }
 
     public String getCreated_by() {
@@ -132,13 +113,11 @@ public class ManManufacturer {
 
     @Override
     public String toString() {
-        return "ManManufacturer{" +
-                "man_id=" + man_id +
-                ", name_en='" + name_en + '\'' +
-                ", name_cn='" + name_cn + '\'' +
-                ", gmc_report_type='" + gmc_report_type + '\'' +
-                ", gmc_report_url='" + gmc_report_url + '\'' +
-                ", description='" + description + '\'' +
+        return "PdnProductDescrition{" +
+                "pdn_id=" + pdn_id +
+                ", pro_id=" + pro_id +
+                ", type_cd='" + type_cd + '\'' +
+                ", descrition='" + descrition + '\'' +
                 ", created_by='" + created_by + '\'' +
                 ", creation_date=" + creation_date +
                 ", last_update_by='" + last_update_by + '\'' +

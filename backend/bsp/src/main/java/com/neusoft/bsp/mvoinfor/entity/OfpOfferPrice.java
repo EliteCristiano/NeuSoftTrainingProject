@@ -1,19 +1,25 @@
 package com.neusoft.bsp.mvoinfor.entity;
 
-
 import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.format.annotation.DateTimeFormat;
 
+import java.math.BigDecimal;
 import java.sql.Timestamp;
 
+public class OfpOfferPrice {
 
-public class ManManufacturer {
+    int ofp_id;
     int man_id;
-    String name_en;
-    String name_cn;
-    String gmc_report_type;
-    String gmc_report_url;
-    String description;
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    Timestamp effetive_start_date;
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    Timestamp effective_end_date;
+    int pro_id;
+    BigDecimal price;
+    String type_cd;
+    int dsr_id;
     String created_by;
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
@@ -25,6 +31,15 @@ public class ManManufacturer {
     int call_cnt;
     String remark;
     String sts_cd;
+    String period;
+
+    public int getOfp_id() {
+        return ofp_id;
+    }
+
+    public void setOfp_id(int ofp_id) {
+        this.ofp_id = ofp_id;
+    }
 
     public int getMan_id() {
         return man_id;
@@ -34,44 +49,52 @@ public class ManManufacturer {
         this.man_id = man_id;
     }
 
-    public String getName_en() {
-        return name_en;
+    public Timestamp getEffetive_start_date() {
+        return effetive_start_date;
     }
 
-    public void setName_en(String name_en) {
-        this.name_en = name_en;
+    public void setEffetive_start_date(Timestamp effetive_start_date) {
+        this.effetive_start_date = effetive_start_date;
     }
 
-    public String getName_cn() {
-        return name_cn;
+    public Timestamp getEffective_end_date() {
+        return effective_end_date;
     }
 
-    public void setName_cn(String name_cn) {
-        this.name_cn = name_cn;
+    public void setEffective_end_date(Timestamp effective_end_date) {
+        this.effective_end_date = effective_end_date;
     }
 
-    public String getGmc_report_type() {
-        return gmc_report_type;
+    public int getPro_id() {
+        return pro_id;
     }
 
-    public void setGmc_report_type(String gmc_report_type) {
-        this.gmc_report_type = gmc_report_type;
+    public void setPro_id(int pro_id) {
+        this.pro_id = pro_id;
     }
 
-    public String getGmc_report_url() {
-        return gmc_report_url;
+    public BigDecimal getPrice() {
+        return price;
     }
 
-    public void setGmc_report_url(String gmc_report_url) {
-        this.gmc_report_url = gmc_report_url;
+    public void setPrice(BigDecimal price) {
+        this.price = price;
     }
 
-    public String getDescription() {
-        return description;
+    public String getType_cd() {
+        return type_cd;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setType_cd(String type_cd) {
+        this.type_cd = type_cd;
+    }
+
+    public int getDsr_id() {
+        return dsr_id;
+    }
+
+    public void setDsr_id(int dsr_id) {
+        this.dsr_id = dsr_id;
     }
 
     public String getCreated_by() {
@@ -130,15 +153,25 @@ public class ManManufacturer {
         this.sts_cd = sts_cd;
     }
 
+    public String getPeriod() {
+        return period;
+    }
+
+    public void setPeriod(String period) {
+        this.period = period;
+    }
+
     @Override
     public String toString() {
-        return "ManManufacturer{" +
-                "man_id=" + man_id +
-                ", name_en='" + name_en + '\'' +
-                ", name_cn='" + name_cn + '\'' +
-                ", gmc_report_type='" + gmc_report_type + '\'' +
-                ", gmc_report_url='" + gmc_report_url + '\'' +
-                ", description='" + description + '\'' +
+        return "OfpOfferPrice{" +
+                "ofp_id=" + ofp_id +
+                ", man_id=" + man_id +
+                ", effetive_start_date=" + effetive_start_date +
+                ", effective_end_date=" + effective_end_date +
+                ", pro_id=" + pro_id +
+                ", price=" + price +
+                ", type_cd='" + type_cd + '\'' +
+                ", dsr_id=" + dsr_id +
                 ", created_by='" + created_by + '\'' +
                 ", creation_date=" + creation_date +
                 ", last_update_by='" + last_update_by + '\'' +
@@ -146,6 +179,7 @@ public class ManManufacturer {
                 ", call_cnt=" + call_cnt +
                 ", remark='" + remark + '\'' +
                 ", sts_cd='" + sts_cd + '\'' +
+                ", period='" + period + '\'' +
                 '}';
     }
 }

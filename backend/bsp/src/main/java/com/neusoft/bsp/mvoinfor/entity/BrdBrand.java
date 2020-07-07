@@ -1,19 +1,16 @@
 package com.neusoft.bsp.mvoinfor.entity;
 
-
 import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.sql.Timestamp;
 
+public class BrdBrand {
 
-public class ManManufacturer {
+    int brd_id;
     int man_id;
     String name_en;
     String name_cn;
-    String gmc_report_type;
-    String gmc_report_url;
-    String description;
     String created_by;
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
@@ -25,6 +22,14 @@ public class ManManufacturer {
     int call_cnt;
     String remark;
     String sts_cd;
+
+    public int getBrd_id() {
+        return brd_id;
+    }
+
+    public void setBrd_id(int brd_id) {
+        this.brd_id = brd_id;
+    }
 
     public int getMan_id() {
         return man_id;
@@ -48,30 +53,6 @@ public class ManManufacturer {
 
     public void setName_cn(String name_cn) {
         this.name_cn = name_cn;
-    }
-
-    public String getGmc_report_type() {
-        return gmc_report_type;
-    }
-
-    public void setGmc_report_type(String gmc_report_type) {
-        this.gmc_report_type = gmc_report_type;
-    }
-
-    public String getGmc_report_url() {
-        return gmc_report_url;
-    }
-
-    public void setGmc_report_url(String gmc_report_url) {
-        this.gmc_report_url = gmc_report_url;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
     }
 
     public String getCreated_by() {
@@ -132,13 +113,11 @@ public class ManManufacturer {
 
     @Override
     public String toString() {
-        return "ManManufacturer{" +
-                "man_id=" + man_id +
+        return "BrdBbrand{" +
+                "brd_id=" + brd_id +
+                ", man_id=" + man_id +
                 ", name_en='" + name_en + '\'' +
                 ", name_cn='" + name_cn + '\'' +
-                ", gmc_report_type='" + gmc_report_type + '\'' +
-                ", gmc_report_url='" + gmc_report_url + '\'' +
-                ", description='" + description + '\'' +
                 ", created_by='" + created_by + '\'' +
                 ", creation_date=" + creation_date +
                 ", last_update_by='" + last_update_by + '\'' +

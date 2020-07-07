@@ -16,4 +16,9 @@ public class ManManufacturerServiceImpl implements ManManufacturerService {
     public ManManufacturer findInfoByMVO(int man_id) {
         return manManufacturerMapper.findInfoByMVO(man_id);
     }
+
+    @Override
+    public int insert(ManManufacturer manManufacturer) {
+        return manManufacturerMapper.insert(manManufacturer);
+    }
 }

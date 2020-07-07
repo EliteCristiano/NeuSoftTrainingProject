@@ -96,6 +96,7 @@ public class UserController extends BaseController {
             }
         }
     }
+    //当MVO公司信息不存在时,更新man_buyer_id
     @PostMapping("/updateUser")
     public BaseModel updateUser(@Validated({UpdateGroup.class}) @RequestBody User user, BindingResult bindingResult) {  //bindingResult用于获得validate的反馈信息
         if (bindingResult.hasErrors()) {

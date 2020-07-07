@@ -1,19 +1,16 @@
 package com.neusoft.bsp.mvoinfor.entity;
 
-
 import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.sql.Timestamp;
 
+public class SpvSpecificAttributeValue {
 
-public class ManManufacturer {
-    int man_id;
+    int spv_id;
+    int spa_id;
     String name_en;
     String name_cn;
-    String gmc_report_type;
-    String gmc_report_url;
-    String description;
     String created_by;
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
@@ -26,12 +23,20 @@ public class ManManufacturer {
     String remark;
     String sts_cd;
 
-    public int getMan_id() {
-        return man_id;
+    public int getSpv_id() {
+        return spv_id;
     }
 
-    public void setMan_id(int man_id) {
-        this.man_id = man_id;
+    public void setSpv_id(int spv_id) {
+        this.spv_id = spv_id;
+    }
+
+    public int getSpa_id() {
+        return spa_id;
+    }
+
+    public void setSpa_id(int spa_id) {
+        this.spa_id = spa_id;
     }
 
     public String getName_en() {
@@ -48,30 +53,6 @@ public class ManManufacturer {
 
     public void setName_cn(String name_cn) {
         this.name_cn = name_cn;
-    }
-
-    public String getGmc_report_type() {
-        return gmc_report_type;
-    }
-
-    public void setGmc_report_type(String gmc_report_type) {
-        this.gmc_report_type = gmc_report_type;
-    }
-
-    public String getGmc_report_url() {
-        return gmc_report_url;
-    }
-
-    public void setGmc_report_url(String gmc_report_url) {
-        this.gmc_report_url = gmc_report_url;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
     }
 
     public String getCreated_by() {
@@ -132,13 +113,11 @@ public class ManManufacturer {
 
     @Override
     public String toString() {
-        return "ManManufacturer{" +
-                "man_id=" + man_id +
+        return "SpvSpecificAttributeValue{" +
+                "spv_id=" + spv_id +
+                ", spa_id=" + spa_id +
                 ", name_en='" + name_en + '\'' +
                 ", name_cn='" + name_cn + '\'' +
-                ", gmc_report_type='" + gmc_report_type + '\'' +
-                ", gmc_report_url='" + gmc_report_url + '\'' +
-                ", description='" + description + '\'' +
                 ", created_by='" + created_by + '\'' +
                 ", creation_date=" + creation_date +
                 ", last_update_by='" + last_update_by + '\'' +

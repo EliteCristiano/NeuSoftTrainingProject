@@ -1,19 +1,21 @@
 package com.neusoft.bsp.mvoinfor.entity;
 
-
 import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.sql.Timestamp;
 
+public class ImgImage {
 
-public class ManManufacturer {
-    int man_id;
-    String name_en;
-    String name_cn;
-    String gmc_report_type;
-    String gmc_report_url;
-    String description;
+    int img_id;
+    String name;
+    int width;
+    int height;
+    String uri;
+    String type_cd;
+    int entity_id;//关联表的主键ID
+    String entity_cd;//关联自定义的code
+    int seq_no;
     String created_by;
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
@@ -26,52 +28,76 @@ public class ManManufacturer {
     String remark;
     String sts_cd;
 
-    public int getMan_id() {
-        return man_id;
+    public int getImg_id() {
+        return img_id;
     }
 
-    public void setMan_id(int man_id) {
-        this.man_id = man_id;
+    public void setImg_id(int img_id) {
+        this.img_id = img_id;
     }
 
-    public String getName_en() {
-        return name_en;
+    public String getName() {
+        return name;
     }
 
-    public void setName_en(String name_en) {
-        this.name_en = name_en;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getName_cn() {
-        return name_cn;
+    public int getWidth() {
+        return width;
     }
 
-    public void setName_cn(String name_cn) {
-        this.name_cn = name_cn;
+    public void setWidth(int width) {
+        this.width = width;
     }
 
-    public String getGmc_report_type() {
-        return gmc_report_type;
+    public int getHeight() {
+        return height;
     }
 
-    public void setGmc_report_type(String gmc_report_type) {
-        this.gmc_report_type = gmc_report_type;
+    public void setHeight(int height) {
+        this.height = height;
     }
 
-    public String getGmc_report_url() {
-        return gmc_report_url;
+    public String getUri() {
+        return uri;
     }
 
-    public void setGmc_report_url(String gmc_report_url) {
-        this.gmc_report_url = gmc_report_url;
+    public void setUri(String uri) {
+        this.uri = uri;
     }
 
-    public String getDescription() {
-        return description;
+    public String getType_cd() {
+        return type_cd;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setType_cd(String type_cd) {
+        this.type_cd = type_cd;
+    }
+
+    public int getEntity_id() {
+        return entity_id;
+    }
+
+    public void setEntity_id(int entity_id) {
+        this.entity_id = entity_id;
+    }
+
+    public String getEntity_cd() {
+        return entity_cd;
+    }
+
+    public void setEntity_cd(String entity_cd) {
+        this.entity_cd = entity_cd;
+    }
+
+    public int getSeq_no() {
+        return seq_no;
+    }
+
+    public void setSeq_no(int seq_no) {
+        this.seq_no = seq_no;
     }
 
     public String getCreated_by() {
@@ -132,13 +158,16 @@ public class ManManufacturer {
 
     @Override
     public String toString() {
-        return "ManManufacturer{" +
-                "man_id=" + man_id +
-                ", name_en='" + name_en + '\'' +
-                ", name_cn='" + name_cn + '\'' +
-                ", gmc_report_type='" + gmc_report_type + '\'' +
-                ", gmc_report_url='" + gmc_report_url + '\'' +
-                ", description='" + description + '\'' +
+        return "ImgImage{" +
+                "img_id=" + img_id +
+                ", name='" + name + '\'' +
+                ", width=" + width +
+                ", height=" + height +
+                ", uri='" + uri + '\'' +
+                ", type_cd='" + type_cd + '\'' +
+                ", entity_id=" + entity_id +
+                ", entity_cd='" + entity_cd + '\'' +
+                ", seq_no=" + seq_no +
                 ", created_by='" + created_by + '\'' +
                 ", creation_date=" + creation_date +
                 ", last_update_by='" + last_update_by + '\'' +
