@@ -10,18 +10,6 @@ import enLang from 'element-ui/lib/locale/lang/en'// 如果使用中文语言包
 
 import '@/styles/index.scss' // global css
 
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fas } from '@fortawesome/free-solid-svg-icons'
-import { far } from '@fortawesome/free-regular-svg-icons'
-import { fab } from '@fortawesome/free-brands-svg-icons'
-import { FontAwesomeIcon, FontAwesomeLayers, FontAwesomeLayersText } from '@fortawesome/vue-fontawesome'
-
-library.add(fas, far, fab)
-
-Vue.component('font-awesome-icon', FontAwesomeIcon)
-Vue.component('font-awesome-layers', FontAwesomeLayers)
-Vue.component('font-awesome-layers-text', FontAwesomeLayersText)
-
 import App from './App'
 import store from './store'
 import router from './router'
@@ -31,12 +19,6 @@ import './permission' // permission control
 import './utils/error-log' // error log
 
 import * as filters from './filters' // global filters
-
-import QuillEditor from 'vue-quill-editor'
-import 'quill/dist/quill.core.css'
-import 'quill/dist/quill.bubble.css'
-import 'quill/dist/quill.snow.css'
-Vue.use(QuillEditor)
 
 /**
  * If you don't want to use mock-server
@@ -55,7 +37,6 @@ Vue.use(Element, {
   size: Cookies.get('size') || 'medium', // set element-ui default size
   locale: enLang // 如果使用中文，无需设置，请删除
 })
-
 
 // register global utility filters
 Object.keys(filters).forEach(key => {
